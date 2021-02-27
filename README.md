@@ -2,6 +2,7 @@
 
 ## 简介
 Auto registration for COVID-19 daily check in BUPT
+
 北邮新冠自动打卡
 
 ## 使用方法
