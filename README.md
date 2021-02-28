@@ -6,7 +6,14 @@ Auto registration for COVID-19 daily check in BUPT
 北邮新冠自动打卡
 
 ## 使用方法
-下载本仓库后，在shell中进入本仓库目录。修改autoreg_main.py中的username和password为自己的学号和密码。
+下载本仓库后，在shell中进入本仓库目录。
+在当前目录下创建名为userinfo.json的文件，文件内容如下。
+<pre>
+{
+    "username": "2018000000",
+    "password": "qwerty!@#$"
+}
+</pre>
 可以打开下属链接尝试出自己的密码（一般为统一身份认证的密码？）。
 
 <https://app.bupt.edu.cn/uc/wap/login?redirect=https%3A%2F%2Fapp.bupt.edu.cn%2Fncov%2Fwap%2Fdefault%2Findex>
