@@ -4,9 +4,8 @@ import json
 import datetime
 import time
 import sys
+import traceback
 
-username = "2018000000"
-password = "1234!@#$QWERTY"
 
 def routine():
     
@@ -24,10 +23,8 @@ def routine():
         session = requests.Session()
 
         # Generate login data
-        login_data = {
-            "username": username,
-            "password": password
-        }
+        load_f = open("userinfo.json", "r")
+        login_data = json.load(load_f)
 
         # Post username and password
         res = session.post(url=login_url, data=login_data)
@@ -69,7 +66,11 @@ def routine():
             print("✖️打卡失败，错误信息: " + res.text)
 
     except LoginError:
-        print("错误")
+        pass
+    except:
+        print("其他错误，错误信息如下")
+        traceback.print_exc()
+
 
     print("\n\n")
     sys.stdout.flush()
