@@ -82,4 +82,4 @@ sys.stdout.flush()
 
 while True:
     routine()
-    time.sleep(3600)
+    break
